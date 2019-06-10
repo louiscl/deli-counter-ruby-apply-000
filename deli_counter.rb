@@ -7,16 +7,20 @@ def line(array)
    unless array.empty?
        intro = "The line is currently:"
        array.each_with_index {|element, index|
-       intro += " #{index.to_i+1}. #{element}"}
+       intro += " #{index+1}. #{element}"}
        puts intro
        else
        puts "The line is currently empty."
    end
 end
 
-def take_a_number(array,name)
-    array << name
-    puts "Welcome, #{name}. You are number #{array.count} in line."
+x = 0
+
+def take_a_number(array)
+    y = x + 1
+    x += 1
+    array << y
+    puts "Welcome. You are number #{y}."
 end
 
 def now_serving(array)
